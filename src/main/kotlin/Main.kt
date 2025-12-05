@@ -1,15 +1,18 @@
 package org.example
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val countOrders: Int = 75
-    val gratefulMessage: String = "Thanks for your order!"
-    println(countOrders)
-    println(gratefulMessage)
+fun formatValue(value: Int): String {
+    return "%02d".format(value)
+}
 
-    var countEmployees: Int = 2000
-//    println(countEmployees)
-    countEmployees = 1999
-    println(countEmployees)
+fun main() {
+    val rawSeconds = readln().toInt()
+
+    val hours = rawSeconds / 3600
+    val minutes = (rawSeconds % 3600) / 60
+    val seconds = (rawSeconds % 3600) % 60
+    val formatHours = formatValue(hours)
+    val formatMinutes = formatValue(minutes)
+    val formatSeconds = formatValue(seconds)
+
+    println("$formatHours:$formatMinutes:$formatSeconds")
 }
