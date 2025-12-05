@@ -4,5 +4,13 @@ package org.example
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val countOrders: Int = 75
-    val gratefulMessage: String = "Спасибо за ваш заказ!"
+    val gratefulMessage: String = "Thanks for your order!"
+    println(countOrders)
+    println(gratefulMessage)
+
+    var countEmployees: Int = 2000
+//    println(countEmployees)
+    countEmployees = 1999
+    println(countEmployees)
+
 }
